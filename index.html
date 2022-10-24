@@ -28,6 +28,10 @@
               "desaturated-blue": "hsl(224, 23%, 55%)",
               "dark-blue": "hsl(223, 47%, 23%)",
             },
+            backgroundImage: {
+              desktop: "url('/images/pattern-background-desktop.svg')",
+              mobile: "url('/images/pattern-background-mobile.svg')",
+            },
           },
         },
       };
@@ -43,11 +47,13 @@
 
     <title>Frontend Mentor | Order summary card</title>
   </head>
-  <body>
+  <body
+    class="min-w-full bg-mobile md:bg-desktop bg-pale-blue bg-no-repeat bg-contain"
+  >
     <div
-      class="container mx-auto font-redHat bg-pale-blue px-5 min-h-screen flex items-center"
+      class="container mx-auto font-redHat px-5 min-h-screen flex items-center justify-center"
     >
-      <div class="max-w-20 bg-white rounded-2xl overflow-hidden">
+      <div class="max-w-sm bg-white rounded-2xl overflow-hidden">
         <img src="./images/illustration-hero.svg" alt="illustration" />
 
         <div class="p-7 flex flex-col gap-5">
@@ -70,20 +76,20 @@
             </div>
             <a
               href="#"
-              class="text-bright-blue hover:text-bright-blue/75 font-bold underline"
+              class="text-bright-blue hover:text-bright-blue/75 font-bold underline transition-all ease-in-out duration-300"
               >Change</a
             >
           </div>
 
           <button
-            class="bg-bright-blue hover:bg-bright-blue/75 text-white font-bold py-4 rounded-xl shadow-lg shadow-bright-blue/50"
+            class="bg-bright-blue hover:bg-bright-blue/75 text-white font-bold py-4 rounded-xl shadow-lg shadow-bright-blue/50 transition-all ease-in-out duration-300"
           >
             Proceed to Payment
           </button>
 
           <a
             href="#"
-            class="text-center text-desaturated-blue hover:text-dark-blue font-bold"
+            class="text-center text-desaturated-blue hover:text-dark-blue font-bold transition-all ease-in-out duration-300"
           >
             Cancel Order
           </a>
